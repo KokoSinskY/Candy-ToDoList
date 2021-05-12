@@ -14,19 +14,21 @@ date.textContent = "" + weekDay + ", " + month + " " + dayOfMonth + "";
 
 
 let addbtn = document.getElementById('btn');
-addbtn.addEventListener('click', newTask);
 let addInput = document.getElementById('addinput');
 let hrdiv = document.getElementById('hrdiv');
 let input = document.getElementById('inpt');
+let priorityBtn = document.getElementById('priorityBtn');
+addbtn.addEventListener('click', newTask);
+
 
 
 function newTask() {
 
-
+	priorityBtn.style.display = 'flex';
 	input.style.display = 'flex';
     let input2 = document.createElement("input");
     input2.type = "button";
-    input2.value = "add";
+    input2.value = "Add";
     input2.className = "submit";
     addInput.appendChild(input2);
 
@@ -36,22 +38,38 @@ function newTask() {
     addbtn.disabled = true;
 
     
-input2.addEventListener('click', addTask);
-    let tasks = document.getElementById('tasks');
-    
+	input2.addEventListener('click', addTask);
+
+    let tasksH = document.getElementById('tasksH');
+    let tasksM = document.getElementById('tasksM');
+    let tasksL = document.getElementById('tasksL');
+
     function addTask() {
         let pElem = document.createElement('p');
         pElem.className = "tasksList";
-        tasks.appendChild(pElem);
-        pElem.innerHTML = "" + `${input.value}` + "";
-        input.value = "";
+        
+        if (priorityBtn.options[priorityBtn.selectedIndex].text == "High") {       	
+        	tasksH.appendChild(pElem);
+        	pElem.innerHTML = "" + `${input.value}` + "";
+        	input.value = "";
+        }
+        else if (priorityBtn.options[priorityBtn.selectedIndex].text == "Normal") {
+        	tasksN.appendChild(pElem);
+        	pElem.innerHTML = "" + `${input.value}` + "";
+        	input.value = "";
+        }
+        else {
+        	tasksL.appendChild(pElem);
+        	pElem.innerHTML = "" + `${input.value}` + "";
+        	input.value = "";
+        }
     }
 
-input.addEventListener('keyup', function(event) {
-	if (event.code === 'Enter') {
-		addTask()
-	}
-})
+		input.addEventListener('keyup', function(event) {
+		if (event.code === 'Enter') {
+			addTask()
+		}
+		})
 
 }
 

@@ -103,6 +103,7 @@ body {
 	color: #F44627;
 	font-size: 24px;
 	font-family: 'Itim', cursive;
+	outline: none;
 }
 
 .addbtn:hover {
@@ -124,13 +125,14 @@ body {
 
 #addinput {
 	display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .addinput {
 	height: 30px;
-	width: 47%;
+	width: 35%;
 	padding: 0 3%;
+	margin: 0 10px 0 10px;
     border: 2px solid #F44627;
     border-radius: 50px 50px 50px 50px;   
     color: #F44627;
@@ -138,7 +140,18 @@ body {
 	font-family: 'Itim', cursive;	
     outline: none;
     display: none;
+}
 
+.priorityChoose {
+	height: 35px;
+	width: 88px;
+    border: 2px solid #F44627;
+    border-radius: 50px 50px 50px 50px;   
+    color: #F44627;
+	font-size: 18px;
+	font-family: 'Itim', cursive;	
+    outline: none;
+    display: none;
 }
 
 .submit {

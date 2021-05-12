@@ -19,17 +19,20 @@
                 <i class="fas fa-tasks fa-3x"></i>
             </div>
             <div class="left_content">
-                <div class="priorityH">
+                <div id="priorityH">
                     <h3>High Priority</h3>
                     <hr class="hrHigh">
+                    <div id="tasksH"></div>
                 </div>
-                <div class="priorityN">
+                <div id="priorityN">
                     <h3>Normal Priority</h3>
                     <hr class="hrNormal">
+                    <div id="tasksN"></div>
                 </div>
-                <div class="priorityL">
+                <div id="priorityL">
                     <h3>Low Priority</h3>
                     <hr class="hrLow">
+                    <div id="tasksL"></div>
                 </div>
             </div>
         </div>
@@ -43,6 +46,16 @@
             </div>
             <hr class="hr">
             <div id="addinput">
+            	<div>
+                <form>
+                    <select id="priorityBtn" class="priorityChoose">
+                    	<option class="priorityChoose2">Priority</option>
+                        <option id="high" value="high">High</option>
+                        <option id="normal" value="normal">Normal</option>
+                        <option id="low" value="low">Low</option>
+                    </select>
+                </form>
+                </div>
                 <input id="inpt" type="text" class="addinput">
             </div>
             <div id="hrdiv">
