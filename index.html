@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="main_wrapper">
+        <div class="left_window">
+            <div class="datebar2">
+                <h2>Current Tasks</h2>
+                <i class="fas fa-tasks fa-3x"></i>
+            </div>
+            <div class="left_content">
+                <div class="priorityH">
+                    <h3>High Priority</h3>
+                    <hr class="hrHigh">
+                </div>
+                <div class="priorityN">
+                    <h3>Normal Priority</h3>
+                    <hr class="hrNormal">
+                </div>
+                <div class="priorityL">
+                    <h3>Low Priority</h3>
+                    <hr class="hrLow">
+                </div>
+            </div>
+        </div>
+        <div class="center_window">
+            <div class="datebar">
+                <h2 id="date"></h2>
+                <i class="far fa-calendar-alt fa-3x"></i>
+            </div>
+            <div class="addbtn">
+                <button id="btn">+ Add new</button>
+            </div>
+            <hr class="hr">
+            <div id="addinput">
+                <input id="inpt" type="text" class="addinput">
+            </div>
+            <div id="hrdiv">
+            </div>
+            <div id="tasks"></div>
+        </div>
+        <div class="right_window">
+            <div class="datebar2">
+                <h2>Done Tasks</h2>
+                <i class="far fa-check-circle fa-3x"></i>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
