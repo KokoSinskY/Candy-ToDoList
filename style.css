@@ -152,6 +152,14 @@ body {
 	font-family: 'Itim', cursive;	
     outline: none;
     display: none;
+    cursor: pointer;
+}
+
+
+
+.priorityChoose:active {
+	transition: all 0.5s;
+	transform: scale(0.99);
 }
 
 .submit {
@@ -225,3 +233,34 @@ body {
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(230, 184, 0, 1), rgba(0, 0, 0, 0));
 }
+
+.fa-check {
+	margin-top: 25px;
+	margin-left: 10px;
+	color: #00802b;
+}
+
+.fa-trash {
+	margin-top: 25px;
+	margin-left: 10px;
+	color: #999999;
+}
+
+#tasksH {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#tasksN {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#tasksL {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
