@@ -62,25 +62,21 @@ function addTask() {
     iElem.id = "removeTask";
     iElem.className = "fas fa-trash fa-sm";
     iElem.setAttribute("data-aos", "fade-left");
+    pElem.innerHTML = "" + `${input.value}` + "";
+    input.value = "";
 
     if (priorityBtn.options[priorityBtn.selectedIndex].text == "High") {
         tasksH.appendChild(pElem);
         tasksH.appendChild(doneElem);
         tasksH.appendChild(iElem);
-        pElem.innerHTML = "" + `${input.value}` + "";
-        input.value = "";
     } else if (priorityBtn.options[priorityBtn.selectedIndex].text == "Normal") {
         tasksN.appendChild(pElem);
         tasksN.appendChild(doneElem);
         tasksN.appendChild(iElem);
-        pElem.innerHTML = "" + `${input.value}` + "";
-        input.value = "";
-    } else {
+    } else if (priorityBtn.options[priorityBtn.selectedIndex].text == "Low") {
         tasksL.appendChild(pElem);
         tasksL.appendChild(doneElem);
         tasksL.appendChild(iElem);
-        pElem.innerHTML = "" + `${input.value}` + "";
-        input.value = "";
     }
 
     let removeTasks = document.getElementsByClassName('removeTask');
@@ -92,23 +88,32 @@ function addTask() {
         doneElem.remove();
     }
 
+
     let doneTasks = document.getElementById('doneTasks');
     doneElem.addEventListener('click', done);
 
     function done() {
-        
-        
+        doneTasks.appendChild(pElem);      
+        doneElem.remove();
+        iElem.remove();
 
-        // let pElem = document.createElement('p');
-        // pElem.className = "tasksList";
-        //pElem.setAttribute("data-aos", "fade-left");
+        let delCrossBtn = document.createElement('i');
+    	delCrossBtn.id = "delCrossBtn";
+    	delCrossBtn.className = "fas fa-times fa-sm";
 
+		doneTasks.appendChild(delCrossBtn);
 
-        pElem.appendChild(doneTasks);
-        // doneTasks.innerHTML = "" + `${pElem.value}` + "";
-        console.log(pElem);
-        // pElem.remove();
-        // iElem.remove();
-        // doneElem.remove();
+        // pElem.setAttribute("data-aos", "fade-right");
+
+        delCrossBtn.addEventListener('click', deleteTask);
+
+        function deleteTask() {
+        	console.log('banglito');
+        	pElem.remove();
+        	delCrossBtn.remove();
+        }
     }
+
 }
+
+

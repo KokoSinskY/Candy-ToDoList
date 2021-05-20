@@ -18,6 +18,7 @@ body {
 	margin: 0 auto;
 	margin-top: 150px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	z-index: 2;
 }
 
 .left_window {
@@ -28,6 +29,7 @@ body {
 	margin: 0 auto;
 	margin-top: 100px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	z-index: 2;
 }
 
 .right_window {
@@ -38,6 +40,7 @@ body {
 	margin: 0 auto;
 	margin-top: 100px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	z-index: 2;
 }
 
 .datebar {
@@ -162,6 +165,10 @@ body {
 	transform: scale(0.99);
 }
 
+option:first-child{
+	display: none;
+}
+
 .submit {
 	cursor: pointer;
 	height: 35px;
@@ -193,6 +200,7 @@ body {
 .left_content {
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 
 }
 
@@ -238,12 +246,21 @@ body {
 	margin-top: 25px;
 	margin-left: 10px;
 	color: #00802b;
+	cursor: pointer;
 }
 
 .fa-trash {
 	margin-top: 25px;
 	margin-left: 10px;
 	color: #999999;
+	cursor: pointer;
+}
+
+.fa-times {
+	margin-top: 26px;
+	margin-left: 10px;
+	color: #d00000;
+	cursor: pointer;
 }
 
 #tasksH {
@@ -264,3 +281,102 @@ body {
 	flex-wrap: wrap;
 }
 
+#doneTasks {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+
+
+
+.blob1 {
+	z-index: 1;
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	top: 300px;
+	left: 20px;
+	animation: move 5s ease-in-out infinite;
+	/*box-shadow*/
+}
+
+.blob2 {
+	z-index: 1;
+	position: absolute;
+	height: 250px;
+	width: 250px;
+	top: 100px;
+	left: 500px;
+	animation: moveTwo 5s, rotation 30s linear infinite;
+	animation-delay: 0.5s;
+	/*animation: rotation 8s infinite linear;*/
+	/*box-shadow*/
+}
+
+.blob3 {
+	z-index: 1;
+	position: absolute;
+	height: 250px;
+	width: 250px;
+	top: 710px;
+	left: 900px;
+	animation: moveThree 4s, rotation 25s ease-in-out infinite;
+	animation-delay: 0.5s;
+	/*animation: rotation 8s infinite linear;*/
+	/*box-shadow*/
+}
+
+@keyframes rotation {
+	from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes move {
+	from {
+	top: 300px;
+	left: 15px;
+	}
+	50% {
+	top: 325px;
+	left: 10px;
+	}
+	to {
+	top: 300px;
+	left: 15px;
+	}
+}
+
+@keyframes moveTwo {
+	from {
+	top: 100px;
+	left: 500px;
+	}
+	50% {
+	top: 130px;
+	left: 490px;
+	}
+	to {
+	top: 100px;
+	left: 500px;
+	}
+}
+
+@keyframes moveThree {
+	from {
+	top: 710px;
+	left: 900px;
+	}
+	50% {
+	top: 720px;
+	left: 915px;
+	}
+	to {
+	top: 710px;
+	left: 900px;
+	}
+}
