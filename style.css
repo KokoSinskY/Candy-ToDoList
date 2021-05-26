@@ -1,8 +1,10 @@
 body {
 	margin: 0 auto;
 	height: 100vh;
-	background: -webkit-linear-gradient(-45deg, #ffa84c 0%,#f70e45 100%);
+	background: -webkit-linear-gradient(-45deg, #99E2B4 0%,#036666 100%);
 	font-family: 'Itim', cursive;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 .main_wrapper {
@@ -13,7 +15,7 @@ body {
 .center_window {
 	height: 70vh;
 	width: 25vw;
-	background-color: white;
+	background: -webkit-linear-gradient(-45deg, #ffffff 0%,#e2e2e2 100%);
 	border-radius: 5px;
 	margin: 0 auto;
 	margin-top: 150px;
@@ -24,7 +26,7 @@ body {
 .left_window {
 	height: 70vh;
 	width: 20vw;
-	background-color: white;
+	background: -webkit-linear-gradient(-45deg, #ffffff 0%,#e2e2e2 100%);
 	border-radius: 5px;
 	margin: 0 auto;
 	margin-top: 100px;
@@ -35,7 +37,7 @@ body {
 .right_window {
 	height: 70vh;
 	width: 20vw;
-	background-color: white;
+	background: -webkit-linear-gradient(-45deg, #ffffff 0%,#e2e2e2 100%);
 	border-radius: 5px;
 	margin: 0 auto;
 	margin-top: 100px;
@@ -47,7 +49,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	height: 10vh;
-	background: -webkit-linear-gradient(top, #ffa84c 0%,#f44627 100%);
+	background: -webkit-linear-gradient(top, #99E2B4 0%,#036666 100%);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
@@ -56,7 +58,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	height: 10vh;
-	background: -webkit-linear-gradient(bottom, #ffa84c 0%,#f44627 100%);
+	background: -webkit-linear-gradient(bottom, #99E2B4 0%,#036666 100%);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
@@ -101,9 +103,9 @@ body {
 	margin-top: 10px; 
 	display: block;
 	background-color: white;
-	border: 2px solid #F44627;
+	border: 2px solid #036666;
 	border-radius: 50px 50px 50px 50px;
-	color: #F44627;
+	color: #036666;
 	font-size: 24px;
 	font-family: 'Itim', cursive;
 	outline: none;
@@ -136,9 +138,9 @@ body {
 	width: 35%;
 	padding: 0 3%;
 	margin: 0 10px 0 10px;
-    border: 2px solid #F44627;
+    border: 2px solid #036666;
     border-radius: 50px 50px 50px 50px;   
-    color: #F44627;
+    color: #036666;
 	font-size: 20px;
 	font-family: 'Itim', cursive;	
     outline: none;
@@ -148,9 +150,9 @@ body {
 .priorityChoose {
 	height: 35px;
 	width: 88px;
-    border: 2px solid #F44627;
+    border: 2px solid #036666;
     border-radius: 50px 50px 50px 50px;   
-    color: #F44627;
+    color: #036666;
 	font-size: 18px;
 	font-family: 'Itim', cursive;	
     outline: none;
@@ -173,9 +175,9 @@ option:first-child{
 	cursor: pointer;
 	height: 35px;
 	width: 20%;;
-    border: 2px solid #F44627;
+    border: 2px solid #036666;
     border-radius: 50px 50px 50px 50px;   
-    color: #F44627;
+    color: #036666;
 	font-size: 20px;
 	font-family: 'Itim', cursive;
 
@@ -192,7 +194,7 @@ option:first-child{
 
 .tasksList {
 	margin-left: 20px;
-	color: #F44627;
+	color: #036666;
 	font-size: 20px;
 	font-family: 'Itim', cursive;
 }
@@ -299,19 +301,21 @@ option:first-child{
 	left: 20px;
 	animation: move 5s ease-in-out infinite;
 	/*box-shadow*/
+	fill: url(#MyGradient);
 }
 
 .blob2 {
 	z-index: 1;
 	position: absolute;
-	height: 250px;
-	width: 250px;
+	height: 220px;
+	width: 220px;
 	top: 100px;
 	left: 500px;
-	animation: moveTwo 5s, rotation 30s linear infinite;
+	animation: moveTwo 5s linear infinite, rotation 30s linear infinite;
 	animation-delay: 0.5s;
 	/*animation: rotation 8s infinite linear;*/
 	/*box-shadow*/
+	fill: url(#MyGradient);
 }
 
 .blob3 {
@@ -320,11 +324,51 @@ option:first-child{
 	height: 250px;
 	width: 250px;
 	top: 710px;
-	left: 900px;
-	animation: moveThree 4s, rotation 25s ease-in-out infinite;
+	left: 600px;
+	animation: moveThree 4s infinite, rotation 25s ease-in-out infinite;
 	animation-delay: 0.5s;
 	/*animation: rotation 8s infinite linear;*/
 	/*box-shadow*/
+	fill: url(#MyGradient);
+}
+
+.blob4 {
+	z-index: 1;
+	position: absolute;
+	height: 250px;
+	width: 250px;
+	top: 580px;
+	left: 1200px;
+	animation: moveFour 4s infinite, rotation 25s ease-in-out infinite;
+	/*animation: rotation 8s infinite linear;*/
+	/*box-shadow*/
+	fill: url(#MyGradient);
+}
+
+.blob5 {
+	z-index: 1;
+	position: absolute;
+	height: 250px;
+	width: 250px;
+	top: 70px;
+	left: 1250px;
+	animation: moveFive 4s infinite, rotation 25s ease-in-out infinite;
+	/*animation: rotation 8s infinite linear;*/
+	/*box-shadow*/
+	fill: url(#MyGradient);
+}
+
+.blob6 {
+	z-index: 1;
+	position: absolute;
+	height: 250px;
+	width: 250px;
+	top: 500px;
+	left: 1650px;
+	animation: moveSix 4s infinite, rotation 25s ease-in-out infinite;
+	/*animation: rotation 8s infinite linear;*/
+	/*box-shadow*/
+	fill: url(#MyGradient);
 }
 
 @keyframes rotation {
@@ -357,7 +401,7 @@ option:first-child{
 	left: 500px;
 	}
 	50% {
-	top: 130px;
+	top: 120px;
 	left: 490px;
 	}
 	to {
@@ -369,14 +413,59 @@ option:first-child{
 @keyframes moveThree {
 	from {
 	top: 710px;
-	left: 900px;
+	left: 600px;
 	}
 	50% {
 	top: 720px;
-	left: 915px;
+	left: 610px;
 	}
 	to {
 	top: 710px;
-	left: 900px;
+	left: 600px;
+	}
+}
+
+@keyframes moveFour {
+	from {
+	top: 580px;
+	left: 1200px;
+	}
+	50% {
+	top: 570px;
+	left: 1195px;
+	}
+	to {
+	top: 580px;
+	left: 1200px;
+	}
+}
+
+@keyframes moveFive {
+	from {
+	top: 60px;
+	left: 1240px;
+	}
+	50% {
+	top: 70px;
+	left: 1250px;
+	}
+	to {
+	top: 60px;
+	left: 1240px;
+	}
+}
+
+@keyframes moveSix {
+	from {
+	top: 500px;
+	left: 1650px;
+	}
+	50% {
+	top: 490px;
+	left: 1640px;
+	}
+	to {
+	top: 500px;
+	left: 1650px;
 	}
 }
