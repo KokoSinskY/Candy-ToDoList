@@ -265,31 +265,44 @@ option:first-child{
 	cursor: pointer;
 }
 
+.fa-history {
+	margin-top: 26px;
+	margin-left: 10px;
+	color: #999999;
+	cursor: pointer;
+}
+
+.fa-trash:hover {
+	color: red;
+}
+
 #tasksH {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 }
 
 #tasksN {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 }
 
 #tasksL {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 }
 
 #doneTasks {
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 }
 
-
-
+.divElem {
+	display: flex;
+}
 
 
 .blob1 {

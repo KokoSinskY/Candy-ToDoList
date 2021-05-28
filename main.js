@@ -49,6 +49,9 @@ let tasksM = document.getElementById('tasksM');
 let tasksL = document.getElementById('tasksL');
 
 function addTask() {
+	let divElem = document.createElement('div');
+	divElem.className = "divElem";
+
     let pElem = document.createElement('p');
     pElem.className = "tasksList";
     pElem.setAttribute("data-aos", "fade-left");
@@ -69,14 +72,26 @@ function addTask() {
         tasksH.appendChild(pElem);
         tasksH.appendChild(doneElem);
         tasksH.appendChild(iElem);
+        tasksH.appendChild(divElem);
+        divElem.appendChild(pElem);
+        divElem.appendChild(doneElem);
+        divElem.appendChild(iElem);
     } else if (priorityBtn.options[priorityBtn.selectedIndex].text == "Normal") {
         tasksN.appendChild(pElem);
         tasksN.appendChild(doneElem);
         tasksN.appendChild(iElem);
+        tasksN.appendChild(divElem);
+        divElem.appendChild(pElem);
+        divElem.appendChild(doneElem);
+        divElem.appendChild(iElem);
     } else if (priorityBtn.options[priorityBtn.selectedIndex].text == "Low") {
         tasksL.appendChild(pElem);
         tasksL.appendChild(doneElem);
         tasksL.appendChild(iElem);
+        tasksL.appendChild(divElem);
+        divElem.appendChild(pElem);
+        divElem.appendChild(doneElem);
+        divElem.appendChild(iElem);
     }
 
     let removeTasks = document.getElementsByClassName('removeTask');
@@ -93,17 +108,21 @@ function addTask() {
     doneElem.addEventListener('click', done);
 
     function done() {
-        doneTasks.appendChild(pElem);      
+		let delCrossBtn = document.createElement('i');
+    	delCrossBtn.id = "delCrossBtn";
+    	delCrossBtn.className = "fas fa-times fa-sm";
+    	let reverseBtn = document.createElement('i');
+    	reverseBtn.id = 'reverseBtn';
+    	reverseBtn.className = "fas fa-history";
+
+    	doneTasks.appendChild(divElem);
+        divElem.appendChild(pElem);
+        divElem.appendChild(reverseBtn);
+        divElem.appendChild(delCrossBtn);      
         doneElem.remove();
         iElem.remove();
 
-        let delCrossBtn = document.createElement('i');
-    	delCrossBtn.id = "delCrossBtn";
-    	delCrossBtn.className = "fas fa-times fa-sm";
-
-		doneTasks.appendChild(delCrossBtn);
-
-        // pElem.setAttribute("data-aos", "fade-right");
+        divElem.setAttribute("data-aos", "fade-left");
 
         delCrossBtn.addEventListener('click', deleteTask);
 
@@ -111,6 +130,7 @@ function addTask() {
         	console.log('banglito');
         	pElem.remove();
         	delCrossBtn.remove();
+        	reverseBtn.remove();
         }
     }
 
