@@ -174,7 +174,7 @@ option:first-child{
 .submit {
 	cursor: pointer;
 	height: 35px;
-	width: 20%;;
+	width: 20%;
     border: 2px solid #036666;
     border-radius: 50px 50px 50px 50px;   
     color: #036666;
@@ -212,36 +212,36 @@ option:first-child{
 }
 
 .left_content > div:nth-child(1) > h3 {
-	color: #cd1818;
+	color: #1E6F5C;
 	margin-bottom: 0;
 }
 
 .left_content > div:nth-child(2) > h3 {
-	color: #ff8000;
+	color: #289672;
 	margin-bottom: 0;
 }
 
 .left_content > div:nth-child(3) > h3 {
-	color: #ffcc00;
+	color: #29BB89;
 	margin-bottom: 0;
 }
 
 .hrHigh {
 	border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(205, 24, 24, 1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(30, 111, 92, 1), rgba(0, 0, 0, 0));
 }
 
 .hrNormal {
 	border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 128, 0, 1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(40, 150, 114, 1), rgba(0, 0, 0, 0));
 }
 
 .hrLow {
 	border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(230, 184, 0, 1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(41, 187, 137, 1), rgba(0, 0, 0, 0));
 }
 
 .fa-check {
@@ -251,6 +251,11 @@ option:first-child{
 	cursor: pointer;
 }
 
+.fa-check:hover {
+	color: #54E346;
+	transition: 0.2s;
+}
+
 .fa-trash {
 	margin-top: 25px;
 	margin-left: 10px;
@@ -258,11 +263,21 @@ option:first-child{
 	cursor: pointer;
 }
 
+.fa-trash:hover {
+	color: red;
+	transition: 0.2s;
+}
+
 .fa-times {
 	margin-top: 26px;
 	margin-left: 10px;
-	color: #d00000;
+	color: #b00202;
 	cursor: pointer;
+}
+
+.fa-times:hover {
+	color: #ff0000;
+	transition: 0.2s;
 }
 
 .fa-history {
@@ -272,8 +287,9 @@ option:first-child{
 	cursor: pointer;
 }
 
-.fa-trash:hover {
-	color: red;
+.fa-history:hover {
+	color: #064420;
+	transition: 0.2s;
 }
 
 #tasksH {
@@ -304,6 +320,27 @@ option:first-child{
 	display: flex;
 }
 
+#delAllTasks {
+	cursor: pointer;
+	margin: auto;
+	margin-top: 10px;
+	height: 35px;
+	width: 40%;
+    border: 2px solid #036666;
+    border-radius: 50px 50px 50px 50px;   
+    color: #036666;
+	font-size: 20px;
+	font-family: 'Itim', cursive;
+}
+
+#delAllTasks:hover {
+	transform: scale(1.01);
+	transition: all 0.5s;
+}
+
+#delAllTasks:active {
+	transform: scale(0.95);
+}
 
 .blob1 {
 	z-index: 1;
@@ -312,8 +349,6 @@ option:first-child{
 	width: 300px;
 	top: 300px;
 	left: 20px;
-	animation: move 5s ease-in-out infinite;
-	/*box-shadow*/
 	fill: url(#MyGradient);
 }
 
@@ -324,10 +359,6 @@ option:first-child{
 	width: 220px;
 	top: 100px;
 	left: 500px;
-	animation: moveTwo 5s linear infinite, rotation 30s linear infinite;
-	animation-delay: 0.5s;
-	/*animation: rotation 8s infinite linear;*/
-	/*box-shadow*/
 	fill: url(#MyGradient);
 }
 
@@ -338,10 +369,6 @@ option:first-child{
 	width: 250px;
 	top: 710px;
 	left: 600px;
-	animation: moveThree 4s infinite, rotation 25s ease-in-out infinite;
-	animation-delay: 0.5s;
-	/*animation: rotation 8s infinite linear;*/
-	/*box-shadow*/
 	fill: url(#MyGradient);
 }
 
@@ -352,9 +379,6 @@ option:first-child{
 	width: 250px;
 	top: 580px;
 	left: 1200px;
-	animation: moveFour 4s infinite, rotation 25s ease-in-out infinite;
-	/*animation: rotation 8s infinite linear;*/
-	/*box-shadow*/
 	fill: url(#MyGradient);
 }
 
@@ -365,9 +389,6 @@ option:first-child{
 	width: 250px;
 	top: 70px;
 	left: 1250px;
-	animation: moveFive 4s infinite, rotation 25s ease-in-out infinite;
-	/*animation: rotation 8s infinite linear;*/
-	/*box-shadow*/
 	fill: url(#MyGradient);
 }
 
@@ -378,107 +399,5 @@ option:first-child{
 	width: 250px;
 	top: 500px;
 	left: 1650px;
-	animation: moveSix 4s infinite, rotation 25s ease-in-out infinite;
-	/*animation: rotation 8s infinite linear;*/
-	/*box-shadow*/
 	fill: url(#MyGradient);
-}
-
-@keyframes rotation {
-	from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes move {
-	from {
-	top: 300px;
-	left: 15px;
-	}
-	50% {
-	top: 325px;
-	left: 10px;
-	}
-	to {
-	top: 300px;
-	left: 15px;
-	}
-}
-
-@keyframes moveTwo {
-	from {
-	top: 100px;
-	left: 500px;
-	}
-	50% {
-	top: 120px;
-	left: 490px;
-	}
-	to {
-	top: 100px;
-	left: 500px;
-	}
-}
-
-@keyframes moveThree {
-	from {
-	top: 710px;
-	left: 600px;
-	}
-	50% {
-	top: 720px;
-	left: 610px;
-	}
-	to {
-	top: 710px;
-	left: 600px;
-	}
-}
-
-@keyframes moveFour {
-	from {
-	top: 580px;
-	left: 1200px;
-	}
-	50% {
-	top: 570px;
-	left: 1195px;
-	}
-	to {
-	top: 580px;
-	left: 1200px;
-	}
-}
-
-@keyframes moveFive {
-	from {
-	top: 60px;
-	left: 1240px;
-	}
-	50% {
-	top: 70px;
-	left: 1250px;
-	}
-	to {
-	top: 60px;
-	left: 1240px;
-	}
-}
-
-@keyframes moveSix {
-	from {
-	top: 500px;
-	left: 1650px;
-	}
-	50% {
-	top: 490px;
-	left: 1640px;
-	}
-	to {
-	top: 500px;
-	left: 1650px;
-	}
 }

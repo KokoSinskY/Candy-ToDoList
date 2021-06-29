@@ -49,8 +49,8 @@ let tasksM = document.getElementById('tasksM');
 let tasksL = document.getElementById('tasksL');
 
 function addTask() {
-	let divElem = document.createElement('div');
-	divElem.className = "divElem";
+    let divElem = document.createElement('div');
+    divElem.className = "divElem";
 
     let pElem = document.createElement('p');
     pElem.className = "tasksList";
@@ -76,6 +76,7 @@ function addTask() {
         divElem.appendChild(pElem);
         divElem.appendChild(doneElem);
         divElem.appendChild(iElem);
+        pElem.id = "High"
     } else if (priorityBtn.options[priorityBtn.selectedIndex].text == "Normal") {
         tasksN.appendChild(pElem);
         tasksN.appendChild(doneElem);
@@ -84,6 +85,7 @@ function addTask() {
         divElem.appendChild(pElem);
         divElem.appendChild(doneElem);
         divElem.appendChild(iElem);
+        pElem.id = "Normal"
     } else if (priorityBtn.options[priorityBtn.selectedIndex].text == "Low") {
         tasksL.appendChild(pElem);
         tasksL.appendChild(doneElem);
@@ -92,6 +94,7 @@ function addTask() {
         divElem.appendChild(pElem);
         divElem.appendChild(doneElem);
         divElem.appendChild(iElem);
+        pElem.id = "Low"
     }
 
     let removeTasks = document.getElementsByClassName('removeTask');
@@ -108,17 +111,17 @@ function addTask() {
     doneElem.addEventListener('click', done);
 
     function done() {
-		let delCrossBtn = document.createElement('i');
-    	delCrossBtn.id = "delCrossBtn";
-    	delCrossBtn.className = "fas fa-times fa-sm";
-    	let reverseBtn = document.createElement('i');
-    	reverseBtn.id = 'reverseBtn';
-    	reverseBtn.className = "fas fa-history";
+        let delCrossBtn = document.createElement('i');
+        delCrossBtn.id = "delCrossBtn";
+        delCrossBtn.className = "fas fa-times fa-sm";
+        let reverseBtn = document.createElement('i');
+        reverseBtn.id = 'reverseBtn';
+        reverseBtn.className = "fas fa-history";
 
-    	doneTasks.appendChild(divElem);
+        doneTasks.appendChild(divElem);
         divElem.appendChild(pElem);
         divElem.appendChild(reverseBtn);
-        divElem.appendChild(delCrossBtn);      
+        divElem.appendChild(delCrossBtn);
         doneElem.remove();
         iElem.remove();
 
@@ -127,13 +130,107 @@ function addTask() {
         delCrossBtn.addEventListener('click', deleteTask);
 
         function deleteTask() {
-        	console.log('banglito');
-        	pElem.remove();
-        	delCrossBtn.remove();
-        	reverseBtn.remove();
+            pElem.remove();
+            delCrossBtn.remove();
+            reverseBtn.remove();
         }
+
+        reverseBtn.addEventListener('click', reverseTask);
+
+        function reverseTask() {
+            if (pElem.id == "High") {
+                tasksH.appendChild(pElem);
+                tasksH.appendChild(doneElem);
+                tasksH.appendChild(iElem);
+                tasksH.appendChild(divElem);
+                divElem.appendChild(pElem);
+                divElem.appendChild(doneElem);
+                divElem.appendChild(iElem);
+                delCrossBtn.remove();
+                reverseBtn.remove();
+            } else if (pElem.id == "Normal") {
+                tasksN.appendChild(pElem);
+                tasksN.appendChild(doneElem);
+                tasksN.appendChild(iElem);
+                tasksN.appendChild(divElem);
+                divElem.appendChild(pElem);
+                divElem.appendChild(doneElem);
+                divElem.appendChild(iElem);
+                delCrossBtn.remove();
+                reverseBtn.remove();
+            } else if (pElem.id == "Low") {
+                tasksL.appendChild(pElem);
+                tasksL.appendChild(doneElem);
+                tasksL.appendChild(iElem);
+                tasksL.appendChild(divElem);
+                divElem.appendChild(pElem);
+                divElem.appendChild(doneElem);
+                divElem.appendChild(iElem);
+                delCrossBtn.remove();
+                reverseBtn.remove();
+            }
+        }
+
+        let delAllTasks = document.getElementById('delAllTasks');
+        delAllTasks.addEventListener('click', ClearDoneTasks)
+
+        function ClearDoneTasks() {
+        	divElem.remove();
+            console.log('działo jo');
+        }
+
     }
 
 }
 
+document.getElementById("blob1").animate([
+  { transform: 'rotate(360deg)'}], {
+  duration: 25000,
+  iterations: Infinity,
+});
 
+document.getElementById("blob2").animate([
+	{ transform: 'rotate(360deg)'},
+  { transform: 'translateX(20px)'},
+  { transform: 'translateY(70px)'},
+  { transform: 'translateX(-20px)'},
+  { transform: 'translateX(1px)'}], {
+  duration: 25000,
+  iterations: Infinity
+});
+
+document.getElementById("blob3").animate([
+	{ transform: 'rotate(360deg)'},
+  { transform: 'translateX(-100px)'},
+  { transform: 'translateY(-50px)'},
+  { transform: 'translateX(100px)'},
+  { transform: 'translateX(1px)'}], {
+  duration: 35000,
+  iterations: Infinity,
+});
+
+document.getElementById("blob4").animate([
+  { transform: 'rotate(360deg)'}], {
+  duration: 22000,
+  iterations: Infinity,
+});
+
+document.getElementById("blob5").animate([
+	{ transform: 'rotate(360deg)'},
+  { transform: 'translateX(-60px)'},
+  { transform: 'translateY(30px)'},
+  { transform: 'translateX(60px)'},
+  { transform: 'translateX(1px)'}], {
+  duration: 30000,
+  iterations: Infinity,
+});
+
+document.getElementById("blob6").animate([
+	{ transform: 'rotate(360deg)'},
+  { transform: 'translateX(20px)'},
+  { transform: 'translateY(70px)'},
+  { transform: 'translateX(-20px)'},
+  { transform: 'translateX(1px)'}], {
+  duration: 20000,
+  iterations: Infinity
+});
