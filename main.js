@@ -1,11 +1,11 @@
 let date = document.getElementById('date');
 
 const myData = new Date();
-const monthNames = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec",
-    "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"
+const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
 ];
 
-const weekDay = myData.toLocaleString('pl-PL', { weekday: 'long' });
+const weekDay = myData.toLocaleString('en-US', { weekday: 'long' });
 const month = monthNames[myData.getMonth()];
 const dayOfMonth = myData.getDate();
 
@@ -176,61 +176,7 @@ function addTask() {
 
         function ClearDoneTasks() {
         	divElem.remove();
-            console.log('działo jo');
         }
-
     }
-
 }
 
-document.getElementById("blob1").animate([
-  { transform: 'rotate(360deg)'}], {
-  duration: 25000,
-  iterations: Infinity,
-});
-
-document.getElementById("blob2").animate([
-	{ transform: 'rotate(360deg)'},
-  { transform: 'translateX(20px)'},
-  { transform: 'translateY(70px)'},
-  { transform: 'translateX(-20px)'},
-  { transform: 'translateX(1px)'}], {
-  duration: 25000,
-  iterations: Infinity
-});
-
-document.getElementById("blob3").animate([
-	{ transform: 'rotate(360deg)'},
-  { transform: 'translateX(-100px)'},
-  { transform: 'translateY(-50px)'},
-  { transform: 'translateX(100px)'},
-  { transform: 'translateX(1px)'}], {
-  duration: 35000,
-  iterations: Infinity,
-});
-
-document.getElementById("blob4").animate([
-  { transform: 'rotate(360deg)'}], {
-  duration: 22000,
-  iterations: Infinity,
-});
-
-document.getElementById("blob5").animate([
-	{ transform: 'rotate(360deg)'},
-  { transform: 'translateX(-60px)'},
-  { transform: 'translateY(30px)'},
-  { transform: 'translateX(60px)'},
-  { transform: 'translateX(1px)'}], {
-  duration: 30000,
-  iterations: Infinity,
-});
-
-document.getElementById("blob6").animate([
-	{ transform: 'rotate(360deg)'},
-  { transform: 'translateX(20px)'},
-  { transform: 'translateY(70px)'},
-  { transform: 'translateX(-20px)'},
-  { transform: 'translateX(1px)'}], {
-  duration: 20000,
-  iterations: Infinity
-});

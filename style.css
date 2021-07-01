@@ -109,11 +109,12 @@ body {
 	font-size: 24px;
 	font-family: 'Itim', cursive;
 	outline: none;
+	transition: 0.5s;
 }
 
 .addbtn:hover {
 	transform: scale(1.01);
-	transition: all 0.5s;
+	transition: 0.5s;
 }
 
 .addbtn:active {
@@ -180,6 +181,7 @@ option:first-child{
     color: #036666;
 	font-size: 20px;
 	font-family: 'Itim', cursive;
+	transition: all 0.5s;
 
 }
 
@@ -340,6 +342,49 @@ option:first-child{
 
 #delAllTasks:active {
 	transform: scale(0.95);
+}
+
+.login {
+	text-align: center;
+}
+
+.loginh2 {
+	color: #036666;
+	font-size: 40px;
+	margin-top: 140px;
+	margin-bottom: 10px;
+}
+
+.logininpt {
+	height: 30px;
+	width: 70%;
+	margin-top: 10px;
+	text-align: center;
+	border: 2px solid #036666;
+    border-radius: 50px 50px 50px 50px;
+    color: #036666;
+    outline: none;
+    font-family: 'Itim', cursive;
+}
+
+.logininpt::placeholder {
+	color: #036666;
+}
+
+p {
+	color: #036666;
+	font-size: 18px;
+}
+
+#regHyperlink {
+	font-weight: 600;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+#regHyperlink:hover {
+	font-size: 19px;
+	transition-duration: 0.4s;
 }
 
 .blob1 {
