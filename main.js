@@ -180,3 +180,29 @@ function addTask() {
     }
 }
 
+// Register Modal
+
+let modal = document.getElementById('registerModal');
+let openModalBtn = document.getElementById('regHyperlink');
+let span = document.getElementById('close');
+
+
+openModalBtn.addEventListener('click', openModal)
+
+function openModal() {
+    modal.style.display = "block";   
+}
+
+span.addEventListener('click', closeModal)
+
+function closeModal() {
+    modal.style.display = "none"
+}
+
+// When the user clicks anywhere outside of the modal, close it
+
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
