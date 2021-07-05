@@ -328,9 +328,9 @@ option:first-child{
 	margin-top: 10px;
 	height: 35px;
 	width: 40%;
-    border: 2px solid #036666;
-    border-radius: 50px 50px 50px 50px;   
-    color: #036666;
+  border: 2px solid #036666;
+  border-radius: 50px 50px 50px 50px;   
+  color: #036666;
 	font-size: 20px;
 	font-family: 'Itim', cursive;
 }
@@ -351,7 +351,7 @@ option:first-child{
 .loginh2 {
 	color: #036666;
 	font-size: 40px;
-	margin-top: 140px;
+	margin-top: 100px;
 	margin-bottom: 10px;
 }
 
@@ -377,6 +377,28 @@ p {
 	font-size: 18px;
 }
 
+.signinBtn {
+	cursor: pointer;
+	margin: auto;
+	margin-top: 10px;
+	height: 30px;
+	width: 28%;
+  border: 2px solid #036666;
+  border-radius: 50px 50px 50px 50px;   
+  color: #036666;
+	font-size: 16px;
+	font-family: 'Itim', cursive;
+}
+
+.signinBtn:hover {
+	transform: scale(1.01);
+	transition: all 0.5s;
+}
+
+.signinBtn:active {
+	transform: scale(0.95);
+}
+
 #regHyperlink {
 	font-weight: 600;
 	cursor: pointer;
@@ -398,14 +420,28 @@ p {
 	height: 70vh;
 	top: 150px;
 	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 25px 45px;
+}
+
+.datebarSignup {
+	display: flex;
+	justify-content: center;
+	height: 10vh;
+	background: -webkit-linear-gradient(bottom, #99E2B4 0%,#036666 100%);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.datebarSignup > h2 {
+	text-align: center;
+	font-size: 34px;
+	color: white;
 }
 
 .close {
   color: #aaaaaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
-  margin-right: 15px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -459,10 +495,15 @@ p {
 .registerh2 {
 	color: #036666;
 	font-size: 30px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	text-align: center;
 }
 
+.registerInfo {
+	color: #036666;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 80px;
+}
 
 .blob1 {
 	z-index: 1;
